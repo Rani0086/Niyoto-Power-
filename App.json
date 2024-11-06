@@ -1,0 +1,41 @@
+{
+    "name": "plant ʙᴀɴ ᴀʟʟ",
+    "description": "simple bot to ban all the mumber form the ᴄʜᴀᴛs",
+    "logo": "https://envs.sh/jU_.png",
+    "keywords": ["plant-salda", "ban-all"],
+    "repository": "https://github.com/Rani0086/plantbanall",
+    "stack": "container",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "ɢᴇᴛ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ ғʀᴏᴍ @ʙᴏᴛғᴀᴛʜᴇʀ ɪɴ ᴛɢ",
+            "required": true
+        },
+        "OWNER": {
+            "description": "ᴛʏᴘᴇ ʏᴏᴜʀ ᴜsᴇʀɴᴀᴍᴇ ᴡɪᴛʜᴏᴜᴛ @ ll_ALPHA_BABY_lll",
+            "required": true,
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʀɪᴀʙʟᴇ ғʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ",
+            "required": true,
+            "value": ""
+        },
+        "API_ID": {
+            "description": "ғɪʟʟ ᴀᴘɪ ɪᴅ ғʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ",
+            "required": true,
+            "value": ""
+        }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1
+          }
+      }
